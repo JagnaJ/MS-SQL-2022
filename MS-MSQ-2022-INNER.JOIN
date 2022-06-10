@@ -1,8 +1,0 @@
-USE TSQL;
-GO
---Here we will see SELECT statement that will return the productname column from the Production.
---Products table (use table alias “p”) and the categoryname column from the Production, categories table (use table alias “c”) using an inner join. 
-SELECT 
-p.productname, c.categoryname
-FROM Production.Products AS p
-INNER JOIN Production.Categories AS c ON p.categoryid = c.categoryid;
