@@ -1,8 +1,8 @@
 USE TSQL;
 GO
 
---Here we will see SELECT statement that will return the productname column from the Production.
---Products table (use table alias “p”) and the categoryname column from the Production, categories table (use table alias “c”) using an inner join. 
+/*Here we will see SELECT statement that will return the productname column from the Production.
+Products table (use table alias “p”) and the categoryname column from the Production, categories table (use table alias “c”) using an inner join.*/ 
 
 SELECT 
 p.productname, c.categoryname
@@ -10,7 +10,7 @@ FROM Production.Products AS p
 INNER JOIN Production.Categories AS c ON p.categoryid = c.categoryid;
 
 __________________________________________
---Writing Queries That Use Multiple-Table Inner Joins
+/*Writing Queries That Use Multiple-Table Inner Joins*/
 
 SELECT Customers.custid, contactname, orderid
 FROM Sales.Customers  
@@ -25,9 +25,9 @@ INNER JOIN Sales.Orders AS o ON c.custid = o.custid;
 --Changing the Table Aliases
 
 _________________________________________
---Add an Additional Table and Columns
---  Now I'm copy the previous script the T-SQL statement and modify it to include three additional columns from 
---the Sales.OrderDetails table: productid, qty, and unitprice. And here what I got.
+/*Add an Additional Table and Columns
+Now I'm copy the previous script the T-SQL statement and modify it to include three additional columns from 
+the Sales.OrderDetails table: productid, qty, and unitprice. And here what I got.*/
 
 SELECT
 c.custid, c.contactname, o.orderid, d.productid, d.qty, d.unitprice
@@ -36,15 +36,15 @@ INNER JOIN Sales.Orders AS o ON c.custid = o.custid
 INNER JOIN Sales.OrderDetails AS d ON d.orderid = o.orderid;
 
 ___________________________________________
---To have one more exercise I will write a SELECT statement agains the HR.Employees table showing the empid, lastame, firstname, title, and mgrid columns.
+/*To have one more exercise I will write a SELECT statement agains the HR.Employees table showing the empid, lastame, firstname, title, and mgrid columns.*/
 
 SELECT
 e.empid, e.lastname, e.firstname, e.title, e.mgrid
 FROM HR.Employees AS e;
 
 ___________________________________________
---Now I will copy previous statement and modify it to include additional columns for the manager information (lastname, firstname) using a self-join.
---Assign the aliases mgrlastname and mgrfirstname to distinguish the manager names from the employee names.
+/*Now I will copy previous statement and modify it to include additional columns for the manager information (lastname, firstname) using a self-join.
+Assign the aliases mgrlastname and mgrfirstname to distinguish the manager names from the employee names.*/
 
 SELECT
 e.empid, e.lastname, e.firstname, e.title, e.mgrid,
