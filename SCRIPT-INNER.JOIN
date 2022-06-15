@@ -2,8 +2,8 @@ USE TSQL;
 GO
 
 
---Here we will see SELECT statement that will return the productname column from the Production.
---Products table (use table alias “p”) and the categoryname column from the Production, categories table (use table alias “c”) using an inner join. 
+/*Here we will see SELECT statement that will return the productname column from the Production.
+Products table (use table alias “p”) and the categoryname column from the Production, categories table (use table alias “c”) using an inner join.*/
 
 
 
