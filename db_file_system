@@ -1,0 +1,6 @@
+Introduction to database file system.
+
+Master - contains all of the system level information on your server, logins and user names.
+Model - is use for templates, every time you create a new table it creates with a certain template.
+msdb - services, server agents, keeps a log when you backup your tables and databases.
+tempdb – most important one, any time you process a query and your database get stored here temporarily intelligent execute which is kind of important.
